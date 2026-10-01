@@ -1,2 +1,13 @@
-year,period,metric,value_m_eur
-2022,FY,Revenue,58763
+year,period,metric,value,unit
+2022,FY,Revenue,58763,EUR_m
+2022,FY,EBIT Adjusted,5627,EUR_m
+2022,FY,EBIT Reported,5325,EUR_m
+2022,FY,R&D Expenses,3079,EUR_m
+2022,FY,Net Income,4247,EUR_m
+2022,FY,EPS,5.40,EUR_per_share
+2022,FY,Free Cash Flow,4324,EUR_m
+2022,FY,FCF before M&A and Customer Financing,4680,EUR_m
+2022,FY,Order Intake,82521,EUR_m
+2022,YE,Order Book,449241,EUR_m
+2022,YE,Net Cash,9431,EUR_m
+2022,YE,Employees,134267,count
