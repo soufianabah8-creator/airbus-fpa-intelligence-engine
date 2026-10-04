@@ -1,1 +1,0 @@
-print("Airbus FP&A Intelligence Engine")
