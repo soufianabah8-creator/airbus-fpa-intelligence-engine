@@ -35,3 +35,15 @@ year,period,metric,kpi_family,value,unit,source_file
 2024,YE,Employees,Employees,156921.0,count,airbus_fy2024_results_press_release.pdf
 2024,YE,Net Cash,Net Cash,11753.0,EUR_m,airbus_fy2024_results_press_release.pdf
 2024,YE,Order Book,Order Book,628917.0,EUR_m,airbus_fy2024_results_press_release.pdf
+2025,FY,EBIT Adjusted,EBIT Adjusted,7128.0,EUR_m,airbus_fy2025_results_press_release.pdf
+2025,FY,EBIT Reported,EBIT Reported,6082.0,EUR_m,airbus_fy2025_results_press_release.pdf
+2025,FY,EPS,EPS,6.61,EUR_per_share,airbus_fy2025_results_press_release.pdf
+2025,FY,Free Cash Flow,Free Cash Flow,4753.0,EUR_m,airbus_fy2025_results_press_release.pdf
+2025,FY,FCF before Customer Financing,Guidance FCF,4574.0,EUR_m,airbus_fy2025_results_press_release.pdf
+2025,FY,Net Income,Net Income,5221.0,EUR_m,airbus_fy2025_results_press_release.pdf
+2025,FY,Order Intake,Order Intake,123261.0,EUR_m,airbus_fy2025_results_press_release.pdf
+2025,FY,R&D Expenses,R&D Expenses,3153.0,EUR_m,airbus_fy2025_results_press_release.pdf
+2025,FY,Revenue,Revenue,73420.0,EUR_m,airbus_fy2025_results_press_release.pdf
+2025,YE,Employees,Employees,165294.0,count,airbus_fy2025_results_press_release.pdf
+2025,YE,Net Cash,Net Cash,12171.0,EUR_m,airbus_fy2025_results_press_release.pdf
+2025,YE,Order Book,Order Book,618824.0,EUR_m,airbus_fy2025_results_press_release.pdf
