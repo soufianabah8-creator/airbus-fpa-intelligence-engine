@@ -47,6 +47,16 @@ year,period,metric,kpi_family,value,unit,source_file
 2025,YE,Employees,Employees,165294.0,count,airbus_fy2025_results_press_release.pdf
 2025,YE,Net Cash,Net Cash,12171.0,EUR_m,airbus_fy2025_results_press_release.pdf
 2025,YE,Order Book,Order Book,618824.0,EUR_m,airbus_fy2025_results_press_release.pdf
+2026,H1,EBIT Adjusted,EBIT Adjusted,2727.0,EUR_m,airbus_h1_2026_results_press_release.pdf
+2026,H1,EBIT Reported,EBIT Reported,2745.0,EUR_m,airbus_h1_2026_results_press_release.pdf
+2026,H1,EPS,EPS,2.84,EUR_per_share,airbus_h1_2026_results_press_release.pdf
+2026,H1,Free Cash Flow,Free Cash Flow,-1043.0,EUR_m,airbus_h1_2026_results_press_release.pdf
+2026,H1,FCF before Customer Financing,Guidance FCF,-1166.0,EUR_m,airbus_h1_2026_results_press_release.pdf
+2026,H1,Net Income,Net Income,2243.0,EUR_m,airbus_h1_2026_results_press_release.pdf
+2026,H1,R&D Expenses,R&D Expenses,1464.0,EUR_m,airbus_h1_2026_results_press_release.pdf
+2026,H1,Revenue,Revenue,33176.0,EUR_m,airbus_h1_2026_results_press_release.pdf
+2026,H1_END,Employees,Employees,168754.0,count,airbus_h1_2026_results_press_release.pdf
+2026,H1_END,Net Cash,Net Cash,8360.0,EUR_m,airbus_h1_2026_results_press_release.pdf
 2026,Q1,EBIT Adjusted,EBIT Adjusted,300.0,EUR_m,airbus_q1_2026_results_press_release.pdf
 2026,Q1,EBIT Reported,EBIT Reported,224.0,EUR_m,airbus_q1_2026_results_press_release.pdf
 2026,Q1,EPS,EPS,0.74,EUR_per_share,airbus_q1_2026_results_press_release.pdf
