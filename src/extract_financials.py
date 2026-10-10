@@ -109,15 +109,60 @@ def clean_number(value):
         .strip()
     )
 
+    # Permet aussi de gérer un nombre écrit (2,485)
+    if (
+        cleaned_value.startswith("(")
+        and cleaned_value.endswith(")")
+    ):
+        cleaned_value = "-" + cleaned_value[1:-1]
+
     return float(cleaned_value)
+
+
+def detect_period(header_value):
+
+    key = normalize_key(header_value)
+
+    if key.startswith("fy"):
+        return "FY"
+
+    if key.startswith("q1"):
+        return "Q1"
+
+    if key.startswith("h1") or key.startswith("hy"):
+        return "H1"
+
+    if key.startswith("9m"):
+        return "9M"
+
+    if key.startswith("31dec"):
+        return "YE"
+
+    if (
+        key.startswith("31march")
+        or key.startswith("31mar")
+    ):
+        return "Q1_END"
+
+    if key.startswith("30june"):
+        return "H1_END"
+
+    if (
+        key.startswith("30september")
+        or key.startswith("30sep")
+    ):
+        return "9M_END"
+
+    return None
 
 
 results = []
 
 
+# Maintenant on prend FY, Q1, H1, 9M...
 pdf_files = sorted(
     input_folder.glob(
-        "airbus_fy*_results_press_release.pdf"
+        "airbus_*_results_press_release.pdf"
     )
 )
 
@@ -145,11 +190,15 @@ for pdf_file in pdf_files:
                 table_name = header[0]
                 header_value = header[1]
 
-                if table_name is None or header_value is None:
+                if (
+                    table_name is None
+                    or header_value is None
+                ):
                     continue
 
-                table_key = normalize_key(table_name)
-                header_key = normalize_key(header_value)
+                table_key = normalize_key(
+                    table_name
+                )
 
                 if table_key != "consolidatedairbus":
                     continue
@@ -162,17 +211,15 @@ for pdf_file in pdf_files:
                 if not year_match:
                     continue
 
-                year = int(year_match.group())
+                year = int(
+                    year_match.group()
+                )
 
-                if header_key.startswith("fy"):
+                period = detect_period(
+                    header_value
+                )
 
-                    period = "FY"
-
-                elif header_key.startswith("31dec"):
-
-                    period = "YE"
-
-                else:
+                if period is None:
                     continue
 
                 for row in table[1:]:
@@ -183,18 +230,28 @@ for pdf_file in pdf_files:
                     raw_metric = row[0]
                     raw_value = row[1]
 
-                    if raw_metric is None or raw_value is None:
+                    if (
+                        raw_metric is None
+                        or raw_value is None
+                    ):
                         continue
 
-                    metric_key = normalize_key(raw_metric)
+                    metric_key = normalize_key(
+                        raw_metric
+                    )
 
-                    for search_name, metric_info in metrics.items():
+                    for (
+                        search_name,
+                        metric_info
+                    ) in metrics.items():
 
                         search_key = normalize_key(
                             search_name
                         )
 
-                        if metric_key.startswith(search_key):
+                        if metric_key.startswith(
+                            search_key
+                        ):
 
                             (
                                 final_name,
@@ -234,61 +291,107 @@ df = df.drop_duplicates(
 )
 
 
-df = df.sort_values(
-    by=[
-        "year",
-        "period",
-        "kpi_family"
-    ]
-)
-
-
 # -----------------------------------------
 # DATA QUALITY CONTROL
 # -----------------------------------------
 
-expected_kpi_families = {
-    "Revenue",
-    "EBIT Adjusted",
-    "EBIT Reported",
-    "R&D Expenses",
-    "Net Income",
-    "EPS",
-    "Free Cash Flow",
-    "Guidance FCF",
-    "Order Intake",
-    "Order Book",
-    "Net Cash",
-    "Employees",
+expected_by_period = {
+
+    "FY": {
+        "Revenue",
+        "EBIT Adjusted",
+        "EBIT Reported",
+        "R&D Expenses",
+        "Net Income",
+        "EPS",
+        "Free Cash Flow",
+        "Guidance FCF",
+        "Order Intake",
+    },
+
+    "YE": {
+        "Order Book",
+        "Net Cash",
+        "Employees",
+    },
+
+    "Q1": {
+        "Revenue",
+        "EBIT Adjusted",
+        "EBIT Reported",
+        "R&D Expenses",
+        "Net Income",
+        "EPS",
+        "Free Cash Flow",
+        "Guidance FCF",
+    },
+
+    "Q1_END": {
+        "Net Cash",
+        "Employees",
+    },
+
+    "H1": {
+        "Revenue",
+        "EBIT Adjusted",
+        "EBIT Reported",
+        "R&D Expenses",
+        "Net Income",
+        "EPS",
+        "Free Cash Flow",
+        "Guidance FCF",
+    },
+
+    "H1_END": {
+        "Net Cash",
+        "Employees",
+    },
+
+    "9M": {
+        "Revenue",
+        "EBIT Adjusted",
+        "EBIT Reported",
+        "R&D Expenses",
+        "Net Income",
+        "EPS",
+        "Free Cash Flow",
+        "Guidance FCF",
+    },
+
+    "9M_END": {
+        "Net Cash",
+        "Employees",
+    },
 }
 
 
 print("\n--- DATA QUALITY CONTROL ---")
 
 
-for year in sorted(df["year"].unique()):
+for (year, period), period_data in df.groupby(
+    ["year", "period"]
+):
 
-    year_data = df[
-        df["year"] == year
-    ]
-
-    found_kpis = set(
-        year_data["kpi_family"]
+    expected = expected_by_period.get(
+        period
     )
 
-    missing_kpis = (
-        expected_kpi_families
-        - found_kpis
+    if expected is None:
+        continue
+
+    found = set(
+        period_data["kpi_family"]
     )
+
+    missing = expected - found
 
     print(
-        f"\n{year} : "
-        f"{len(found_kpis)}/"
-        f"{len(expected_kpi_families)} "
-        f"KPI trouvés"
+        f"\n{year} {period} : "
+        f"{len(found & expected)}/"
+        f"{len(expected)} KPI trouvés"
     )
 
-    if not missing_kpis:
+    if not missing:
 
         print(
             "✅ Toutes les métriques "
@@ -301,10 +404,20 @@ for year in sorted(df["year"].unique()):
             "⚠️ Métriques manquantes :"
         )
 
-        for metric in sorted(
-            missing_kpis
-        ):
-            print(f"   - {metric}")
+        for metric in sorted(missing):
+
+            print(
+                f"   - {metric}"
+            )
+
+
+df = df.sort_values(
+    by=[
+        "year",
+        "period",
+        "kpi_family"
+    ]
+)
 
 
 output_path.parent.mkdir(
