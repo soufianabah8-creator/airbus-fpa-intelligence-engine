@@ -398,7 +398,8 @@ def extract_from_text_fallback(
         net_cash = extract_text_value(
             full_text,
             (
-                r"Net Cash position,"
+                r"Net Cash position"
+                r"(?:\(\d+\))?,"
                 r"\s*in millions of Euro\s+"
                 r"(\(?-?[\d,]+(?:\.\d+)?\)?)"
             ),
@@ -592,8 +593,6 @@ for pdf_file in pdf_files:
                 )
             ]
 
-            # Q1 / H1 / 9M doivent normalement
-            # produire 8 KPI de flux + 2 snapshots.
             if len(source_results) < 10:
 
                 extract_from_text_fallback(

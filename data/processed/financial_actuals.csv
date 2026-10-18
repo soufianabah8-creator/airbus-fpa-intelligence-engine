@@ -1,4 +1,14 @@
 year,period,metric,kpi_family,value,unit,source_file
+2022,9M,EBIT Adjusted,EBIT Adjusted,3481.0,EUR_m,airbus_9m_2022_results_press_release.pdf
+2022,9M,EBIT Reported,EBIT Reported,3552.0,EUR_m,airbus_9m_2022_results_press_release.pdf
+2022,9M,EPS,EPS,3.26,EUR_per_share,airbus_9m_2022_results_press_release.pdf
+2022,9M,Free Cash Flow,Free Cash Flow,2502.0,EUR_m,airbus_9m_2022_results_press_release.pdf
+2022,9M,FCF before M&A and Customer Financing,Guidance FCF,2899.0,EUR_m,airbus_9m_2022_results_press_release.pdf
+2022,9M,Net Income,Net Income,2568.0,EUR_m,airbus_9m_2022_results_press_release.pdf
+2022,9M,R&D Expenses,R&D Expenses,1965.0,EUR_m,airbus_9m_2022_results_press_release.pdf
+2022,9M,Revenue,Revenue,38119.0,EUR_m,airbus_9m_2022_results_press_release.pdf
+2022,9M_END,Employees,Employees,131615.0,count,airbus_9m_2022_results_press_release.pdf
+2022,9M_END,Net Cash,Net Cash,7972.0,EUR_m,airbus_9m_2022_results_press_release.pdf
 2022,FY,EBIT Adjusted,EBIT Adjusted,5627.0,EUR_m,airbus_fy2022_results_press_release.pdf
 2022,FY,EBIT Reported,EBIT Reported,5325.0,EUR_m,airbus_fy2022_results_press_release.pdf
 2022,FY,EPS,EPS,5.4,EUR_per_share,airbus_fy2022_results_press_release.pdf
@@ -8,6 +18,26 @@ year,period,metric,kpi_family,value,unit,source_file
 2022,FY,Order Intake,Order Intake,82521.0,EUR_m,airbus_fy2022_results_press_release.pdf
 2022,FY,R&D Expenses,R&D Expenses,3079.0,EUR_m,airbus_fy2022_results_press_release.pdf
 2022,FY,Revenue,Revenue,58763.0,EUR_m,airbus_fy2022_results_press_release.pdf
+2022,H1,EBIT Adjusted,EBIT Adjusted,2645.0,EUR_m,airbus_h1_2022_results_press_release.pdf
+2022,H1,EBIT Reported,EBIT Reported,2579.0,EUR_m,airbus_h1_2022_results_press_release.pdf
+2022,H1,EPS,EPS,2.42,EUR_per_share,airbus_h1_2022_results_press_release.pdf
+2022,H1,Free Cash Flow,Free Cash Flow,1646.0,EUR_m,airbus_h1_2022_results_press_release.pdf
+2022,H1,FCF before M&A and Customer Financing,Guidance FCF,1955.0,EUR_m,airbus_h1_2022_results_press_release.pdf
+2022,H1,Net Income,Net Income,1901.0,EUR_m,airbus_h1_2022_results_press_release.pdf
+2022,H1,R&D Expenses,R&D Expenses,1256.0,EUR_m,airbus_h1_2022_results_press_release.pdf
+2022,H1,Revenue,Revenue,24810.0,EUR_m,airbus_h1_2022_results_press_release.pdf
+2022,H1_END,Employees,Employees,128873.0,count,airbus_h1_2022_results_press_release.pdf
+2022,H1_END,Net Cash,Net Cash,7214.0,EUR_m,airbus_h1_2022_results_press_release.pdf
+2022,Q1,EBIT Adjusted,EBIT Adjusted,1263.0,EUR_m,airbus_q1_2022_results_press_release.pdf
+2022,Q1,EBIT Reported,EBIT Reported,1429.0,EUR_m,airbus_q1_2022_results_press_release.pdf
+2022,Q1,EPS,EPS,1.55,EUR_per_share,airbus_q1_2022_results_press_release.pdf
+2022,Q1,Free Cash Flow,Free Cash Flow,161.0,EUR_m,airbus_q1_2022_results_press_release.pdf
+2022,Q1,FCF before M&A and Customer Financing,Guidance FCF,213.0,EUR_m,airbus_q1_2022_results_press_release.pdf
+2022,Q1,Net Income,Net Income,1219.0,EUR_m,airbus_q1_2022_results_press_release.pdf
+2022,Q1,R&D Expenses,R&D Expenses,586.0,EUR_m,airbus_q1_2022_results_press_release.pdf
+2022,Q1,Revenue,Revenue,12000.0,EUR_m,airbus_q1_2022_results_press_release.pdf
+2022,Q1_END,Employees,Employees,127120.0,count,airbus_q1_2022_results_press_release.pdf
+2022,Q1_END,Net Cash,Net Cash,7711.0,EUR_m,airbus_q1_2022_results_press_release.pdf
 2022,YE,Employees,Employees,134267.0,count,airbus_fy2022_results_press_release.pdf
 2022,YE,Net Cash,Net Cash,9431.0,EUR_m,airbus_fy2022_results_press_release.pdf
 2022,YE,Order Book,Order Book,449241.0,EUR_m,airbus_fy2022_results_press_release.pdf
