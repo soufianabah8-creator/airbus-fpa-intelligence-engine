@@ -11,6 +11,16 @@ year,period,metric,kpi_family,value,unit,source_file
 2022,YE,Employees,Employees,134267.0,count,airbus_fy2022_results_press_release.pdf
 2022,YE,Net Cash,Net Cash,9431.0,EUR_m,airbus_fy2022_results_press_release.pdf
 2022,YE,Order Book,Order Book,449241.0,EUR_m,airbus_fy2022_results_press_release.pdf
+2023,9M,EBIT Adjusted,EBIT Adjusted,3631.0,EUR_m,airbus_9m_2023_results_press_release.pdf
+2023,9M,EBIT Reported,EBIT Reported,2712.0,EUR_m,airbus_9m_2023_results_press_release.pdf
+2023,9M,EPS,EPS,2.96,EUR_per_share,airbus_9m_2023_results_press_release.pdf
+2023,9M,Free Cash Flow,Free Cash Flow,718.0,EUR_m,airbus_9m_2023_results_press_release.pdf
+2023,9M,FCF before M&A and Customer Financing,Guidance FCF,1037.0,EUR_m,airbus_9m_2023_results_press_release.pdf
+2023,9M,Net Income,Net Income,2332.0,EUR_m,airbus_9m_2023_results_press_release.pdf
+2023,9M,R&D Expenses,R&D Expenses,2167.0,EUR_m,airbus_9m_2023_results_press_release.pdf
+2023,9M,Revenue,Revenue,42560.0,EUR_m,airbus_9m_2023_results_press_release.pdf
+2023,9M_END,Employees,Employees,145511.0,count,airbus_9m_2023_results_press_release.pdf
+2023,9M_END,Net Cash,Net Cash,8315.0,EUR_m,airbus_9m_2023_results_press_release.pdf
 2023,FY,EBIT Adjusted,EBIT Adjusted,5838.0,EUR_m,airbus_fy2023_results_press_release.pdf
 2023,FY,EBIT Reported,EBIT Reported,4603.0,EUR_m,airbus_fy2023_results_press_release.pdf
 2023,FY,EPS,EPS,4.8,EUR_per_share,airbus_fy2023_results_press_release.pdf
@@ -20,6 +30,26 @@ year,period,metric,kpi_family,value,unit,source_file
 2023,FY,Order Intake,Order Intake,186493.0,EUR_m,airbus_fy2023_results_press_release.pdf
 2023,FY,R&D Expenses,R&D Expenses,3257.0,EUR_m,airbus_fy2023_results_press_release.pdf
 2023,FY,Revenue,Revenue,65446.0,EUR_m,airbus_fy2023_results_press_release.pdf
+2023,H1,EBIT Adjusted,EBIT Adjusted,2618.0,EUR_m,airbus_h1_2023_results_press_release.pdf
+2023,H1,EBIT Reported,EBIT Reported,1887.0,EUR_m,airbus_h1_2023_results_press_release.pdf
+2023,H1,EPS,EPS,1.94,EUR_per_share,airbus_h1_2023_results_press_release.pdf
+2023,H1,Free Cash Flow,Free Cash Flow,1474.0,EUR_m,airbus_h1_2023_results_press_release.pdf
+2023,H1,FCF before M&A and Customer Financing,Guidance FCF,1574.0,EUR_m,airbus_h1_2023_results_press_release.pdf
+2023,H1,Net Income,Net Income,1526.0,EUR_m,airbus_h1_2023_results_press_release.pdf
+2023,H1,R&D Expenses,R&D Expenses,1431.0,EUR_m,airbus_h1_2023_results_press_release.pdf
+2023,H1,Revenue,Revenue,27663.0,EUR_m,airbus_h1_2023_results_press_release.pdf
+2023,H1_END,Employees,Employees,141799.0,count,airbus_h1_2023_results_press_release.pdf
+2023,H1_END,Net Cash,Net Cash,9064.0,EUR_m,airbus_h1_2023_results_press_release.pdf
+2023,Q1,EBIT Adjusted,EBIT Adjusted,773.0,EUR_m,airbus_q1_2023_results_press_release.pdf
+2023,Q1,EBIT Reported,EBIT Reported,390.0,EUR_m,airbus_q1_2023_results_press_release.pdf
+2023,Q1,EPS,EPS,0.59,EUR_per_share,airbus_q1_2023_results_press_release.pdf
+2023,Q1,Free Cash Flow,Free Cash Flow,-886.0,EUR_m,airbus_q1_2023_results_press_release.pdf
+2023,Q1,FCF before M&A and Customer Financing,Guidance FCF,-889.0,EUR_m,airbus_q1_2023_results_press_release.pdf
+2023,Q1,Net Income,Net Income,466.0,EUR_m,airbus_q1_2023_results_press_release.pdf
+2023,Q1,R&D Expenses,R&D Expenses,683.0,EUR_m,airbus_q1_2023_results_press_release.pdf
+2023,Q1,Revenue,Revenue,11763.0,EUR_m,airbus_q1_2023_results_press_release.pdf
+2023,Q1_END,Employees,Employees,137715.0,count,airbus_q1_2023_results_press_release.pdf
+2023,Q1_END,Net Cash,Net Cash,8359.0,EUR_m,airbus_q1_2023_results_press_release.pdf
 2023,YE,Employees,Employees,147893.0,count,airbus_fy2023_results_press_release.pdf
 2023,YE,Net Cash,Net Cash,10726.0,EUR_m,airbus_fy2023_results_press_release.pdf
 2023,YE,Order Book,Order Book,553893.0,EUR_m,airbus_fy2023_results_press_release.pdf
