@@ -1,4 +1,32 @@
 year,kpi_family,metric,value,unit,source_file,quarter,data_type,calculation
+2024,EBIT Adjusted,EBIT Adjusted,577.0,EUR_m,airbus_q1_2024_results_press_release.pdf,Q1,official,Reported Q1
+2024,EBIT Reported,EBIT Reported,609.0,EUR_m,airbus_q1_2024_results_press_release.pdf,Q1,official,Reported Q1
+2024,Free Cash Flow,Free Cash Flow,-1799.0,EUR_m,airbus_q1_2024_results_press_release.pdf,Q1,official,Reported Q1
+2024,Guidance FCF,FCF before Customer Financing,-1791.0,EUR_m,airbus_q1_2024_results_press_release.pdf,Q1,official,Reported Q1
+2024,Net Income,Net Income,595.0,EUR_m,airbus_q1_2024_results_press_release.pdf,Q1,official,Reported Q1
+2024,R&D Expenses,R&D Expenses,743.0,EUR_m,airbus_q1_2024_results_press_release.pdf,Q1,official,Reported Q1
+2024,Revenue,Revenue,12830.0,EUR_m,airbus_q1_2024_results_press_release.pdf,Q1,official,Reported Q1
+2024,EBIT Adjusted,EBIT Adjusted,814.0,EUR_m,airbus_h1_2024_results_press_release.pdf | airbus_q1_2024_results_press_release.pdf,Q2,calculated,H1 - Q1
+2024,EBIT Reported,EBIT Reported,847.0,EUR_m,airbus_h1_2024_results_press_release.pdf | airbus_q1_2024_results_press_release.pdf,Q2,calculated,H1 - Q1
+2024,Free Cash Flow,Free Cash Flow,1240.0,EUR_m,airbus_h1_2024_results_press_release.pdf | airbus_q1_2024_results_press_release.pdf,Q2,calculated,H1 - Q1
+2024,Guidance FCF,FCF before Customer Financing,1262.0,EUR_m,airbus_h1_2024_results_press_release.pdf | airbus_q1_2024_results_press_release.pdf,Q2,calculated,H1 - Q1
+2024,Net Income,Net Income,230.0,EUR_m,airbus_h1_2024_results_press_release.pdf | airbus_q1_2024_results_press_release.pdf,Q2,calculated,H1 - Q1
+2024,R&D Expenses,R&D Expenses,850.0,EUR_m,airbus_h1_2024_results_press_release.pdf | airbus_q1_2024_results_press_release.pdf,Q2,calculated,H1 - Q1
+2024,Revenue,Revenue,15995.0,EUR_m,airbus_h1_2024_results_press_release.pdf | airbus_q1_2024_results_press_release.pdf,Q2,calculated,H1 - Q1
+2024,EBIT Adjusted,EBIT Adjusted,1407.0,EUR_m,airbus_9m_2024_results_press_release.pdf | airbus_h1_2024_results_press_release.pdf,Q3,calculated,9M - H1
+2024,EBIT Reported,EBIT Reported,1234.0,EUR_m,airbus_9m_2024_results_press_release.pdf | airbus_h1_2024_results_press_release.pdf,Q3,calculated,9M - H1
+2024,Free Cash Flow,Free Cash Flow,-318.0,EUR_m,airbus_9m_2024_results_press_release.pdf | airbus_h1_2024_results_press_release.pdf,Q3,calculated,9M - H1
+2024,Guidance FCF,FCF before Customer Financing,-316.0,EUR_m,airbus_9m_2024_results_press_release.pdf | airbus_h1_2024_results_press_release.pdf,Q3,calculated,9M - H1
+2024,Net Income,Net Income,983.0,EUR_m,airbus_9m_2024_results_press_release.pdf | airbus_h1_2024_results_press_release.pdf,Q3,calculated,9M - H1
+2024,R&D Expenses,R&D Expenses,758.0,EUR_m,airbus_9m_2024_results_press_release.pdf | airbus_h1_2024_results_press_release.pdf,Q3,calculated,9M - H1
+2024,Revenue,Revenue,15689.0,EUR_m,airbus_9m_2024_results_press_release.pdf | airbus_h1_2024_results_press_release.pdf,Q3,calculated,9M - H1
+2024,EBIT Adjusted,EBIT Adjusted,2556.0,EUR_m,airbus_fy2024_results_press_release.pdf | airbus_9m_2024_results_press_release.pdf,Q4,calculated,FY - 9M
+2024,EBIT Reported,EBIT Reported,2614.0,EUR_m,airbus_fy2024_results_press_release.pdf | airbus_9m_2024_results_press_release.pdf,Q4,calculated,FY - 9M
+2024,Free Cash Flow,Free Cash Flow,5338.0,EUR_m,airbus_fy2024_results_press_release.pdf | airbus_9m_2024_results_press_release.pdf,Q4,calculated,FY - 9M
+2024,Guidance FCF,FCF before Customer Financing,5308.0,EUR_m,airbus_fy2024_results_press_release.pdf | airbus_9m_2024_results_press_release.pdf,Q4,calculated,FY - 9M
+2024,Net Income,Net Income,2424.0,EUR_m,airbus_fy2024_results_press_release.pdf | airbus_9m_2024_results_press_release.pdf,Q4,calculated,FY - 9M
+2024,R&D Expenses,R&D Expenses,899.0,EUR_m,airbus_fy2024_results_press_release.pdf | airbus_9m_2024_results_press_release.pdf,Q4,calculated,FY - 9M
+2024,Revenue,Revenue,24716.0,EUR_m,airbus_fy2024_results_press_release.pdf | airbus_9m_2024_results_press_release.pdf,Q4,calculated,FY - 9M
 2025,EBIT Adjusted,EBIT Adjusted,624.0,EUR_m,airbus_q1_2025_results_press_release.pdf,Q1,official,Reported Q1
 2025,EBIT Reported,EBIT Reported,473.0,EUR_m,airbus_q1_2025_results_press_release.pdf,Q1,official,Reported Q1
 2025,Free Cash Flow,Free Cash Flow,-296.0,EUR_m,airbus_q1_2025_results_press_release.pdf,Q1,official,Reported Q1
