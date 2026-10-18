@@ -12,8 +12,8 @@ output_path = Path(
 )
 
 
-# Ces KPI sont des flux :
-# on peut donc calculer Q2 = H1 - Q1
+# KPI de flux :
+# ils peuvent être reconstruits par différence
 flow_metrics = {
     "Revenue",
     "EBIT Adjusted",
@@ -27,130 +27,187 @@ flow_metrics = {
 
 df = pd.read_csv(input_path)
 
-
-# On récupère uniquement les données 2026 Q1 et H1
-q1 = df[
-    (df["year"] == 2026)
-    & (df["period"] == "Q1")
-    & (df["kpi_family"].isin(flow_metrics))
+df = df[
+    df["kpi_family"].isin(flow_metrics)
 ].copy()
 
 
-h1 = df[
-    (df["year"] == 2026)
-    & (df["period"] == "H1")
-    & (df["kpi_family"].isin(flow_metrics))
-].copy()
+quarterly_results = []
 
 
-# -----------------------------------------
-# Q1 OFFICIEL
-# -----------------------------------------
+def get_period(year, period):
 
-q1_output = q1[
-    [
-        "year",
-        "kpi_family",
-        "metric",
-        "value",
-        "unit",
-        "source_file",
-    ]
-].copy()
+    return df[
+        (df["year"] == year)
+        & (df["period"] == period)
+    ].copy()
 
 
-q1_output["quarter"] = "Q1"
-q1_output["data_type"] = "official"
-q1_output["calculation"] = "Reported Q1"
+def add_official_quarter(
+    period_data,
+    quarter,
+):
+
+    if period_data.empty:
+        return
+
+    output = period_data[
+        [
+            "year",
+            "kpi_family",
+            "metric",
+            "value",
+            "unit",
+            "source_file",
+        ]
+    ].copy()
+
+    output["quarter"] = quarter
+    output["data_type"] = "official"
+    output["calculation"] = f"Reported {quarter}"
+
+    quarterly_results.append(output)
 
 
-# -----------------------------------------
-# CALCUL Q2 = H1 - Q1
-# -----------------------------------------
+def add_calculated_quarter(
+    current_period,
+    previous_period,
+    quarter,
+    calculation,
+):
 
-q2 = h1.merge(
-    q1,
-    on="kpi_family",
-    suffixes=("_h1", "_q1"),
-)
+    if (
+        current_period.empty
+        or previous_period.empty
+    ):
+        return
+
+    merged = current_period.merge(
+        previous_period,
+        on="kpi_family",
+        suffixes=("_current", "_previous"),
+    )
+
+    output = pd.DataFrame(
+        {
+            "year": merged["year_current"],
+            "quarter": quarter,
+            "kpi_family": merged["kpi_family"],
+            "metric": merged["metric_current"],
+            "value": (
+                merged["value_current"]
+                - merged["value_previous"]
+            ),
+            "unit": merged["unit_current"],
+            "data_type": "calculated",
+            "calculation": calculation,
+            "source_file": (
+                merged["source_file_current"]
+                + " | "
+                + merged["source_file_previous"]
+            ),
+        }
+    )
+
+    quarterly_results.append(output)
 
 
-q2["value"] = (
-    q2["value_h1"]
-    - q2["value_q1"]
-)
+# --------------------------------------------------
+# RECONSTRUCTION DES TRIMESTRES
+# --------------------------------------------------
+
+for year in sorted(df["year"].unique()):
+
+    q1 = get_period(year, "Q1")
+    h1 = get_period(year, "H1")
+    m9 = get_period(year, "9M")
+    fy = get_period(year, "FY")
+
+    # Q1 = directement publié
+    add_official_quarter(
+        q1,
+        "Q1",
+    )
+
+    # Q2 = H1 - Q1
+    add_calculated_quarter(
+        h1,
+        q1,
+        "Q2",
+        "H1 - Q1",
+    )
+
+    # Q3 = 9M - H1
+    add_calculated_quarter(
+        m9,
+        h1,
+        "Q3",
+        "9M - H1",
+    )
+
+    # Q4 = FY - 9M
+    add_calculated_quarter(
+        fy,
+        m9,
+        "Q4",
+        "FY - 9M",
+    )
 
 
-q2_output = pd.DataFrame(
-    {
-        "year": q2["year_h1"],
-        "quarter": "Q2",
-        "kpi_family": q2["kpi_family"],
-        "metric": q2["metric_h1"],
-        "value": q2["value"],
-        "unit": q2["unit_h1"],
-        "data_type": "calculated",
-        "calculation": "H1 - Q1",
-        "source_file": (
-            q2["source_file_h1"]
-            + " | "
-            + q2["source_file_q1"]
-        ),
-    }
-)
-
-
-# -----------------------------------------
+# --------------------------------------------------
 # DATASET FINAL
-# -----------------------------------------
-
-q1_output = q1_output[
-    [
-        "year",
-        "quarter",
-        "kpi_family",
-        "metric",
-        "value",
-        "unit",
-        "data_type",
-        "calculation",
-        "source_file",
-    ]
-]
-
+# --------------------------------------------------
 
 quarterly_df = pd.concat(
-    [
-        q1_output,
-        q2_output,
-    ],
+    quarterly_results,
     ignore_index=True,
+)
+
+
+quarter_order = {
+    "Q1": 1,
+    "Q2": 2,
+    "Q3": 3,
+    "Q4": 4,
+}
+
+
+quarterly_df["quarter_order"] = (
+    quarterly_df["quarter"]
+    .map(quarter_order)
 )
 
 
 quarterly_df = quarterly_df.sort_values(
     by=[
         "year",
-        "quarter",
+        "quarter_order",
         "kpi_family",
     ]
 )
 
 
-# -----------------------------------------
+quarterly_df = quarterly_df.drop(
+    columns="quarter_order"
+)
+
+
+# --------------------------------------------------
 # DATA QUALITY CONTROL
-# -----------------------------------------
+# --------------------------------------------------
 
 print(
     "\n--- QUARTERLY DATA QUALITY CONTROL ---"
 )
 
 
-for quarter in ["Q1", "Q2"]:
-
-    quarter_data = quarterly_df[
-        quarterly_df["quarter"] == quarter
-    ]
+for (
+    year,
+    quarter
+), quarter_data in quarterly_df.groupby(
+    ["year", "quarter"],
+    sort=False,
+):
 
     found = set(
         quarter_data["kpi_family"]
@@ -159,7 +216,7 @@ for quarter in ["Q1", "Q2"]:
     missing = flow_metrics - found
 
     print(
-        f"\n2026 {quarter} : "
+        f"\n{year} {quarter} : "
         f"{len(found)}/{len(flow_metrics)} "
         "KPI trouvés"
     )
@@ -183,6 +240,10 @@ for quarter in ["Q1", "Q2"]:
                 f"   - {metric}"
             )
 
+
+# --------------------------------------------------
+# EXPORT
+# --------------------------------------------------
 
 output_path.parent.mkdir(
     parents=True,
