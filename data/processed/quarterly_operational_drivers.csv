@@ -1,0 +1,73 @@
+year,quarter,driver,driver_type,value,unit,data_type,calculation,source_file
+2022,Q1,Commercial Aircraft Backlog,snapshot,7023.0,aircraft,official,End of Q1,airbus_q1_2022_results_press_release.pdf
+2022,Q1,Commercial Aircraft Deliveries,flow,142.0,aircraft,official,Reported Q1,airbus_q1_2022_results_press_release.pdf
+2022,Q1,Gross Commercial Orders,flow,253.0,aircraft,official,Reported Q1,airbus_q1_2022_results_press_release.pdf
+2022,Q1,Net Commercial Orders,flow,83.0,aircraft,official,Reported Q1,airbus_q1_2022_results_press_release.pdf
+2022,Q2,Commercial Aircraft Backlog,snapshot,7046.0,aircraft,official,End of H1,airbus_h1_2022_results_press_release.pdf
+2022,Q2,Commercial Aircraft Deliveries,flow,155.0,aircraft,calculated,H1 - Q1,airbus_h1_2022_results_press_release.pdf | airbus_q1_2022_results_press_release.pdf
+2022,Q2,Gross Commercial Orders,flow,189.0,aircraft,calculated,H1 - Q1,airbus_h1_2022_results_press_release.pdf | airbus_q1_2022_results_press_release.pdf
+2022,Q2,Net Commercial Orders,flow,176.0,aircraft,calculated,H1 - Q1,airbus_h1_2022_results_press_release.pdf | airbus_q1_2022_results_press_release.pdf
+2022,Q3,Commercial Aircraft Backlog,snapshot,7294.0,aircraft,official,End of 9M,airbus_9m_2022_results_press_release.pdf
+2022,Q3,Commercial Aircraft Deliveries,flow,140.0,aircraft,calculated,9M - H1,airbus_9m_2022_results_press_release.pdf | airbus_h1_2022_results_press_release.pdf
+2022,Q3,Gross Commercial Orders,flow,414.0,aircraft,calculated,9M - H1,airbus_9m_2022_results_press_release.pdf | airbus_h1_2022_results_press_release.pdf
+2022,Q3,Net Commercial Orders,flow,388.0,aircraft,calculated,9M - H1,airbus_9m_2022_results_press_release.pdf | airbus_h1_2022_results_press_release.pdf
+2022,Q4,Commercial Aircraft Backlog,snapshot,7239.0,aircraft,official,End of FY,airbus_fy2022_results_press_release.pdf
+2022,Q4,Commercial Aircraft Deliveries,flow,224.0,aircraft,calculated,FY - 9M,airbus_fy2022_results_press_release.pdf | airbus_9m_2022_results_press_release.pdf
+2022,Q4,Gross Commercial Orders,flow,222.0,aircraft,calculated,FY - 9M,airbus_fy2022_results_press_release.pdf | airbus_9m_2022_results_press_release.pdf
+2022,Q4,Net Commercial Orders,flow,173.0,aircraft,calculated,FY - 9M,airbus_fy2022_results_press_release.pdf | airbus_9m_2022_results_press_release.pdf
+2023,Q1,Commercial Aircraft Backlog,snapshot,7254.0,aircraft,official,End of Q1,airbus_q1_2023_results_press_release.pdf
+2023,Q1,Commercial Aircraft Deliveries,flow,127.0,aircraft,official,Reported Q1,airbus_q1_2023_results_press_release.pdf
+2023,Q1,Gross Commercial Orders,flow,156.0,aircraft,official,Reported Q1,airbus_q1_2023_results_press_release.pdf
+2023,Q1,Net Commercial Orders,flow,142.0,aircraft,official,Reported Q1,airbus_q1_2023_results_press_release.pdf
+2023,Q2,Commercial Aircraft Backlog,snapshot,7967.0,aircraft,official,End of H1,airbus_h1_2023_results_press_release.pdf
+2023,Q2,Commercial Aircraft Deliveries,flow,189.0,aircraft,calculated,H1 - Q1,airbus_h1_2023_results_press_release.pdf | airbus_q1_2023_results_press_release.pdf
+2023,Q2,Gross Commercial Orders,flow,924.0,aircraft,calculated,H1 - Q1,airbus_h1_2023_results_press_release.pdf | airbus_q1_2023_results_press_release.pdf
+2023,Q2,Net Commercial Orders,flow,902.0,aircraft,calculated,H1 - Q1,airbus_h1_2023_results_press_release.pdf | airbus_q1_2023_results_press_release.pdf
+2023,Q3,Commercial Aircraft Backlog,snapshot,7992.0,aircraft,official,End of 9M,airbus_9m_2023_results_press_release.pdf
+2023,Q3,Commercial Aircraft Deliveries,flow,172.0,aircraft,calculated,9M - H1,airbus_9m_2023_results_press_release.pdf | airbus_h1_2023_results_press_release.pdf
+2023,Q3,Gross Commercial Orders,flow,200.0,aircraft,calculated,9M - H1,airbus_9m_2023_results_press_release.pdf | airbus_h1_2023_results_press_release.pdf
+2023,Q3,Net Commercial Orders,flow,197.0,aircraft,calculated,9M - H1,airbus_9m_2023_results_press_release.pdf | airbus_h1_2023_results_press_release.pdf
+2023,Q4,Commercial Aircraft Backlog,snapshot,8598.0,aircraft,official,End of FY,airbus_fy2023_results_press_release.pdf
+2023,Q4,Commercial Aircraft Deliveries,flow,247.0,aircraft,calculated,FY - 9M,airbus_fy2023_results_press_release.pdf | airbus_9m_2023_results_press_release.pdf
+2023,Q4,Gross Commercial Orders,flow,1039.0,aircraft,calculated,FY - 9M,airbus_fy2023_results_press_release.pdf | airbus_9m_2023_results_press_release.pdf
+2023,Q4,Net Commercial Orders,flow,853.0,aircraft,calculated,FY - 9M,airbus_fy2023_results_press_release.pdf | airbus_9m_2023_results_press_release.pdf
+2024,Q1,Commercial Aircraft Backlog,snapshot,8626.0,aircraft,official,End of Q1,airbus_q1_2024_results_press_release.pdf
+2024,Q1,Commercial Aircraft Deliveries,flow,142.0,aircraft,official,Reported Q1,airbus_q1_2024_results_press_release.pdf
+2024,Q1,Gross Commercial Orders,flow,170.0,aircraft,official,Reported Q1,airbus_q1_2024_results_press_release.pdf
+2024,Q1,Net Commercial Orders,flow,170.0,aircraft,official,Reported Q1,airbus_q1_2024_results_press_release.pdf
+2024,Q2,Commercial Aircraft Backlog,snapshot,8585.0,aircraft,official,End of H1,airbus_h1_2024_results_press_release.pdf
+2024,Q2,Commercial Aircraft Deliveries,flow,181.0,aircraft,calculated,H1 - Q1,airbus_h1_2024_results_press_release.pdf | airbus_q1_2024_results_press_release.pdf
+2024,Q2,Gross Commercial Orders,flow,157.0,aircraft,calculated,H1 - Q1,airbus_h1_2024_results_press_release.pdf | airbus_q1_2024_results_press_release.pdf
+2024,Q2,Net Commercial Orders,flow,140.0,aircraft,calculated,H1 - Q1,airbus_h1_2024_results_press_release.pdf | airbus_q1_2024_results_press_release.pdf
+2024,Q3,Commercial Aircraft Backlog,snapshot,8749.0,aircraft,official,End of 9M,airbus_9m_2024_results_press_release.pdf
+2024,Q3,Commercial Aircraft Deliveries,flow,174.0,aircraft,calculated,9M - H1,airbus_9m_2024_results_press_release.pdf | airbus_h1_2024_results_press_release.pdf
+2024,Q3,Gross Commercial Orders,flow,340.0,aircraft,calculated,9M - H1,airbus_9m_2024_results_press_release.pdf | airbus_h1_2024_results_press_release.pdf
+2024,Q3,Net Commercial Orders,flow,338.0,aircraft,calculated,9M - H1,airbus_9m_2024_results_press_release.pdf | airbus_h1_2024_results_press_release.pdf
+2024,Q4,Commercial Aircraft Backlog,snapshot,8658.0,aircraft,official,End of FY,airbus_fy2024_results_press_release.pdf
+2024,Q4,Commercial Aircraft Deliveries,flow,269.0,aircraft,calculated,FY - 9M,airbus_fy2024_results_press_release.pdf | airbus_9m_2024_results_press_release.pdf
+2024,Q4,Gross Commercial Orders,flow,211.0,aircraft,calculated,FY - 9M,airbus_fy2024_results_press_release.pdf | airbus_9m_2024_results_press_release.pdf
+2024,Q4,Net Commercial Orders,flow,178.0,aircraft,calculated,FY - 9M,airbus_fy2024_results_press_release.pdf | airbus_9m_2024_results_press_release.pdf
+2025,Q1,Commercial Aircraft Backlog,snapshot,8726.0,aircraft,official,End of Q1,airbus_q1_2025_results_press_release.pdf
+2025,Q1,Commercial Aircraft Deliveries,flow,136.0,aircraft,official,Reported Q1,airbus_q1_2025_results_press_release.pdf
+2025,Q1,Gross Commercial Orders,flow,280.0,aircraft,official,Reported Q1,airbus_q1_2025_results_press_release.pdf
+2025,Q1,Net Commercial Orders,flow,204.0,aircraft,official,Reported Q1,airbus_q1_2025_results_press_release.pdf
+2025,Q2,Commercial Aircraft Backlog,snapshot,8754.0,aircraft,official,End of H1,airbus_h1_2025_results_press_release.pdf
+2025,Q2,Commercial Aircraft Deliveries,flow,170.0,aircraft,calculated,H1 - Q1,airbus_h1_2025_results_press_release.pdf | airbus_q1_2025_results_press_release.pdf
+2025,Q2,Gross Commercial Orders,flow,214.0,aircraft,calculated,H1 - Q1,airbus_h1_2025_results_press_release.pdf | airbus_q1_2025_results_press_release.pdf
+2025,Q2,Net Commercial Orders,flow,198.0,aircraft,calculated,H1 - Q1,airbus_h1_2025_results_press_release.pdf | airbus_q1_2025_results_press_release.pdf
+2025,Q3,Commercial Aircraft Backlog,snapshot,8665.0,aircraft,official,End of 9M,airbus_9m_2025_results_press_release.pdf
+2025,Q3,Commercial Aircraft Deliveries,flow,201.0,aircraft,calculated,9M - H1,airbus_9m_2025_results_press_release.pdf | airbus_h1_2025_results_press_release.pdf
+2025,Q3,Gross Commercial Orders,flow,116.0,aircraft,calculated,9M - H1,airbus_9m_2025_results_press_release.pdf | airbus_h1_2025_results_press_release.pdf
+2025,Q3,Net Commercial Orders,flow,112.0,aircraft,calculated,9M - H1,airbus_9m_2025_results_press_release.pdf | airbus_h1_2025_results_press_release.pdf
+2025,Q4,Commercial Aircraft Backlog,snapshot,8754.0,aircraft,official,End of FY,airbus_fy2025_results_press_release.pdf
+2025,Q4,Commercial Aircraft Deliveries,flow,286.0,aircraft,calculated,FY - 9M,airbus_fy2025_results_press_release.pdf | airbus_9m_2025_results_press_release.pdf
+2025,Q4,Gross Commercial Orders,flow,390.0,aircraft,calculated,FY - 9M,airbus_fy2025_results_press_release.pdf | airbus_9m_2025_results_press_release.pdf
+2025,Q4,Net Commercial Orders,flow,375.0,aircraft,calculated,FY - 9M,airbus_fy2025_results_press_release.pdf | airbus_9m_2025_results_press_release.pdf
+2026,Q1,Commercial Aircraft Backlog,snapshot,9037.0,aircraft,official,End of Q1,airbus_q1_2026_results_press_release.pdf
+2026,Q1,Commercial Aircraft Deliveries,flow,114.0,aircraft,official,Reported Q1,airbus_q1_2026_results_press_release.pdf
+2026,Q1,Gross Commercial Orders,flow,408.0,aircraft,official,Reported Q1,airbus_q1_2026_results_press_release.pdf
+2026,Q1,Net Commercial Orders,flow,398.0,aircraft,official,Reported Q1,airbus_q1_2026_results_press_release.pdf
+2026,Q2,Commercial Aircraft Backlog,snapshot,9222.0,aircraft,official,End of H1,airbus_h1_2026_results_press_release.pdf
+2026,Q2,Commercial Aircraft Deliveries,flow,237.0,aircraft,calculated,H1 - Q1,airbus_h1_2026_results_press_release.pdf | airbus_q1_2026_results_press_release.pdf
+2026,Q2,Gross Commercial Orders,flow,478.0,aircraft,calculated,H1 - Q1,airbus_h1_2026_results_press_release.pdf | airbus_q1_2026_results_press_release.pdf
+2026,Q2,Net Commercial Orders,flow,423.0,aircraft,calculated,H1 - Q1,airbus_h1_2026_results_press_release.pdf | airbus_q1_2026_results_press_release.pdf
